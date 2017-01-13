@@ -8,8 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView totalTextView;
+    EditText percentageText;
+    EditText numberText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,19 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        totalTextView = (TextView) findViewById(R.id.totalTextView);
+        percentageText = (EditText) findViewById(R.id.percentageTxt);
+        numberText = (EditText) findViewById(R.id.numberTxt);
+
+        Button calcBtn = (Button) findViewById(R.id.calcBtn);
+        calcBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
+
     }
 
     @Override
